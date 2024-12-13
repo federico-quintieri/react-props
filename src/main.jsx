@@ -8,7 +8,25 @@ import "./index.css";
 import posts from "./components/data";
 
 // Faccio funzione creare un array di JSX richiamando la funzione Card
-const arrPostsJSX = posts.map((curObject, currIndex) => {
+// const arrPostsJSX = posts.map((curObject, currIndex) => {
+//   return (
+//     <Card
+//       key={currIndex}
+//       title={curObject.title}
+//       image={curObject.image}
+//       content={curObject.content}
+//       tags={curObject.tags}
+//       published={curObject.published}
+//     />
+//   );
+// });
+
+// Se oggetto ha proprieta published uguale a true aggiungi oggetto a nuovo array
+const arrPostsfiltered = posts.filter(
+  (curObject, currIndex) => curObject.published
+);
+// Map lo faccio su questo array di oggetti filtrati
+const arrayPostsJSX = arrPostsfiltered.map((curObject, currIndex) => {
   return (
     <Card
       key={currIndex}
@@ -16,7 +34,6 @@ const arrPostsJSX = posts.map((curObject, currIndex) => {
       image={curObject.image}
       content={curObject.content}
       tags={curObject.tags}
-      published={curObject.published}
     />
   );
 });
@@ -25,7 +42,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <div className="centro">
       <Header />
-      {arrPostsJSX}
+      {arrayPostsJSX}
     </div>
     <Footer />
   </StrictMode>

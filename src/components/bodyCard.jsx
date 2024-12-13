@@ -3,9 +3,9 @@ import css from "./bodyCard.module.css";
 
 // Componente che ci ritorna una card jsx
 function Card({ title, image, content, tags, published }) {
-  if (!published) {
-    return null; // Non ritorna nulla se `published` è false
-  }
+  // if (!published) {
+  //   return null; // Non ritorna nulla se `published` è false
+  // }
 
   // Array JSX dei tags
   const tagsJSX = tags.map((currElement, currIndex) => (
@@ -13,8 +13,6 @@ function Card({ title, image, content, tags, published }) {
       {currElement}
     </span>
   ));
-
-  console.log(tagsJSX);
 
   return (
     <div className={css.card}>
