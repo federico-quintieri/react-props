@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+header h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+body {
+  background-color: rgb(218, 218, 218);
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centro orizzontale */
+  align-items: center; /* Centro verticale */
+  height: 100vh; /* L'altezza del div è pari all'altezza del viewport */
+}
+
+html,
+body {
+  height: 100%; /* Necessario per centrare rispetto all'intero viewport */
+  margin: 0;
+}

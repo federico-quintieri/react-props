@@ -1,0 +1,52 @@
+/* CSS della card */
+.card {
+  width: 30%;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Effetto rialzo */
+  overflow: hidden; /* Impedisce all'immagine di uscire dal contenitore */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animazione per il rialzo */
+  background-color: #f8f9fa; /* Colore di sfondo */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Rialza la card */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta l'ombra */
+}
+
+.card img {
+  display: block;
+  width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+  height: auto; /* Mantiene le proporzioni */
+}
+
+.card p {
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card button {
+  padding: 10px 15px;
+  background-color: orange;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: rgb(255, 230, 0);
+}
+
+.card h3 {
+  padding: 10px;
+  color: #222;
+  font-size: 18px;
+  text-align: left;
+}
