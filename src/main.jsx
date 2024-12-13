@@ -36,6 +36,7 @@ const arrayPostsJSX = posts.map(
         image={curObject.image}
         content={curObject.content}
         tags={curObject.tags}
+        id={curObject.id}
       />
     )
 );
