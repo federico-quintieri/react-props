@@ -22,21 +22,23 @@ import posts from "./components/data";
 // });
 
 // Se oggetto ha proprieta published uguale a true aggiungi oggetto a nuovo array
-const arrPostsfiltered = posts.filter(
-  (curObject, currIndex) => curObject.published
-);
+// const arrPostsfiltered = posts.filter(
+//   (curObject, currIndex) => curObject.published
+// );
+
 // Map lo faccio su questo array di oggetti filtrati
-const arrayPostsJSX = arrPostsfiltered.map((curObject, currIndex) => {
-  return (
-    <Card
-      key={currIndex}
-      title={curObject.title}
-      image={curObject.image}
-      content={curObject.content}
-      tags={curObject.tags}
-    />
-  );
-});
+const arrayPostsJSX = posts.map(
+  (curObject, currIndex) =>
+    curObject.published && (
+      <Card
+        key={currIndex}
+        title={curObject.title}
+        image={curObject.image}
+        content={curObject.content}
+        tags={curObject.tags}
+      />
+    )
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
